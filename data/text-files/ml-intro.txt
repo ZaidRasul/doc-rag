@@ -1,0 +1,50 @@
+Introduction to Machine Learning
+Machine Learning, or ML, is a way of making computers learn patterns from data instead of programming every rule manually.
+For example, suppose we want a computer to recognize spam emails. Instead of writing hundreds of rules about what spam looks like, we can give the computer thousands of examples of spam and normal emails. The machine learning model learns the patterns that separate them.
+Data
+Data is the information used to teach a machine learning model.
+For example, if we want to predict house prices, our data might contain the house size, number of bedrooms, location, age of the house, and selling price.
+Usually, the more useful and accurate the data is, the better the model can learn.
+Features
+Features are the pieces of information that the model uses to make a prediction.
+For a house price model, features could include:
+- House size
+- Number of bedrooms
+- Location
+- Number of bathrooms
+- Age of the house
+The model learns how these features relate to the house price.
+Labels
+A label is the answer we want the model to predict.
+For example, if we provide information about a house and want to predict its price, the house price is the label.
+Model
+A model is the system that learns patterns from the data.
+During training, the model looks at examples and adjusts itself so that its predictions become more accurate.
+After training, we can give the model new data that it has never seen before and ask it to make predictions.
+Training
+Training is the process of teaching the model.
+The model makes predictions, compares those predictions with the correct answers, measures its mistakes, and adjusts itself to reduce those mistakes.
+This process is repeated many times.
+Testing
+After training, we need to check whether the model actually learned useful patterns.
+We use data that the model did not see during training. This is called test data.
+If the model performs well on new data, it has learned useful patterns rather than simply remembering the training examples.
+Main Types of Machine Learning
+There are three major types of machine learning.
+Supervised Learning uses data where the correct answers are already known. For example, predicting house prices, detecting spam emails, or determining whether an image contains a cat or dog.
+Unsupervised Learning uses data without known answers. The model tries to discover patterns or groups by itself. For example, a company might group customers based on similar purchasing behavior.
+Reinforcement Learning teaches an agent through rewards and penalties. The agent performs actions, observes what happens, and learns which actions lead to better rewards. It is commonly used in robotics, games, and AI agents.
+Classification
+Classification is used when the model needs to choose between categories.
+Examples include spam or not spam, cat or dog, fraud or legitimate transaction, and positive or negative review.
+Regression
+Regression is used when the model needs to predict a number.
+Examples include house price, temperature, sales, or delivery time.
+Overfitting
+Overfitting happens when a model learns the training data too closely but performs poorly on new data.
+It is similar to a student memorizing answers to practice questions without understanding the subject.
+A good model should learn general patterns that also work on data it has never seen before.
+The Basic ML Process
+A typical machine learning project follows this process:
+Collect data → Clean data → Choose useful features → Split into training and testing data → Choose a model → Train the model → Evaluate it → Improve it → Use it to make predictions
+The main idea behind machine learning is simple: give a computer examples, allow it to learn patterns from those examples, and then use those patterns to make predictions about new data.

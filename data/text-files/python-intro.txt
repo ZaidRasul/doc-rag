@@ -1,0 +1,19 @@
+Python is a popular programming language that is easy to read and learn. It is widely used for web development, automation, data science, machine learning, artificial intelligence, and many other areas.
+Introduction to Python
+Variables are used to store information. For example, you can store a person's name, age, price, or whether something is true or false.
+Python has several basic data types:
+- Integer: whole numbers such as 10, 25, or -5
+- Float: decimal numbers such as 10.5 or 3.14
+- String: text such as "Hello"
+- Boolean: either True or False
+Lists are used to store multiple values together. For example, you could have a list containing several student names or numbers. Each item in a list has a position called an index. Python starts counting indexes from 0.
+Dictionaries store information as key-value pairs. For example, a person's name could be the key "name" and their actual name could be the value. Dictionaries are very useful when you want to quickly find information using a key.
+Sets are similar to lists, but they only store unique values. They are useful when you do not want duplicates.
+Conditions allow a program to make decisions. Python uses if, elif, and else. For example, a program could check whether someone is 18 or older and decide whether they are an adult.
+Loops allow you to repeat something. A for loop is commonly used when going through a list of items. A while loop keeps running while a condition remains true.
+Functions are reusable pieces of code that perform a particular task. You can give information to a function, let it process that information, and return a result. Functions help keep programs organized and prevent repeating the same logic.
+Classes and objects are used to represent more complex things. For example, you could create a Person class that describes what information and actions every person object should have. Classes are an important part of object-oriented programming.
+Modules and libraries allow you to use functionality written by other developers. Python has a large ecosystem of libraries for areas such as machine learning, web development, data processing, and automation.
+Exception handling is used to deal with errors without immediately crashing the program. Python lets you try an operation and decide what should happen if that operation fails.
+Files can be read and written using Python. This allows programs to work with text files, CSV files, JSON data, images, datasets, and many other types of information.
+For AI and machine learning, a good learning order is: Python basics → variables → conditions → loops → strings → lists → dictionaries and sets → functions → classes → files → exceptions → modules → NumPy → Pandas → Matplotlib → scikit-learn → PyTorch.
