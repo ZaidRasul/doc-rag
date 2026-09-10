@@ -1,8 +1,8 @@
 langchain
-langchain-core
 langchain_core 
 langchain-community
 pypdf
 pymupdf
+langchain_text_splitters
 
  
