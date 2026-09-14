@@ -219,3 +219,6 @@ __marimo__/
 settings.json
 .vscode/
 **/vector_store/
+
+
+trash.ipynb
