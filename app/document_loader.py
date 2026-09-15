@@ -6,9 +6,9 @@ from langchain_community.document_loaders import PyMuPDFLoader
 
 supported_extensions = [".pdf", ".txt", ".md"]
 
-def load_files(filename: str, file_bytes: bytes) -> List[Document]:
+def load_files(file_name: str, file_bytes: bytes) -> List[Document]:
 
-    extension = Path(filename).suffix.lower()
+    extension = Path(file_name).suffix.lower()
     if extension not in supported_extensions:
         raise ValueError(f"Unsupported file type {extension}")
 
