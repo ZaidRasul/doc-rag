@@ -22,8 +22,14 @@ class RAGEngine:
     def query(self, query: str, top_k: int = 3) -> str:
         pass
 
-    def doc_splitter(self, documents: List[Document], chunk_size: int = 1000, chunk_overlap: int = 200) -> List[Document]:
-        pass
+    def doc_splitter(self, documents: List[Document], chunk_size: int = 800, chunk_overlap: int = 200) -> List[Document]:
+        splitter = RecursiveCharacterTextSplitter(
+            chunk_size=chunk_size,
+            chunk_overlap=chunk_overlap,
+            separators=["\n\n", "\n", " ", ""]
+                                                  )
+        split_docs = splitter.split_documents(documents)
+        return split_docs
 
     def embedder(self, documents: List[Document]) -> List[List[float]]:
         pass
