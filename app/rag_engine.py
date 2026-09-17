@@ -55,22 +55,25 @@ class RAGEngine:
 
             embeddings_list.append(embedding.tolist())
 
-            # add  everything to chroma
-            self.collection.add(
-                ids = ids,
-                documents = texts,
-                embeddings = embeddings_list,
-                metadatas = metadatas
+        # add  everything to chroma
+        self.collection.add(
+            ids = ids,
+            documents = texts,
+            embeddings = embeddings_list,
+            metadatas = metadatas
             )
         return len(chunks)
         
     
     def retrieve(self, query: str,  top_k: int = 6) -> List[Dict[str, Any]]:
+        if self.collection.count() == 0:
+            return []
         query_embedding = self.embedder([query])[0]
         number_of_results = min(top_k, self.collection.count())
+        
         results = self.collection.query(
             query_embeddings=[query_embedding.tolist()],
-            n_results=top_k
+            n_results=number_of_results
             )
 
         retrieved_docs = []
@@ -84,8 +87,8 @@ class RAGEngine:
                 "content": doc,
                 "metadata": metadata,
                 "distance": distance,
-                
-            })
+                "similarity_score": 1 - distance
+                })
 
         return retrieved_docs
     def answer(self, query: str, chat_history: List[Dict[str, str]] | None = None, top_k: int = 3) -> Dict[str, Any]:
@@ -140,3 +143,49 @@ Answer:
             "sources": sources,
         }
 
+    @staticmethod
+    def _format_chat_history(
+        chat_history: List[Dict[str, str]],
+        maximum_messages: int = 6,
+    ) -> str:
+        """
+        Include a small amount of recent history for follow-up questions.
+        """
+        recent_messages = chat_history[-maximum_messages:]
+
+        if not recent_messages:
+            return "No previous conversation."
+
+        return "\n".join(
+            f"{message['role'].title()}: {message['content']}"
+            for message in recent_messages
+        )
+
+    @staticmethod
+    def _build_source_list(
+        retrieved_documents: List[Dict[str, Any]],
+    ) -> List[Dict[str, Any]]:
+        sources = []
+        seen = set()
+
+        for result in retrieved_documents:
+            metadata = result["metadata"]
+            source = metadata.get("source", "Unknown file")
+            page = metadata.get("page")
+
+            source_key = (source, page)
+
+            if source_key in seen:
+                continue
+
+            seen.add(source_key)
+
+            sources.append(
+                {
+                    "source": source,
+                    "page": int(page) + 1 if page is not None else None,
+                    "similarity_score": result["similarity_score"],
+                }
+            )
+
+        return sources
