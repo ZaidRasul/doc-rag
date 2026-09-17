@@ -16,5 +16,24 @@ class RAGEngine:
         self.embedding_model = SentenceTransformer(embedding_model_name)
         self.llm = ChatGroq(groq_api_key=groq_api_key, model_name=model_name, temperature=0.1, max_tokens=1024)
         self.chroma_client = chromadb.Client()
-        self.collection = self.chroma_client.create_collection(name="rag_collection")
+        self.collection = self.chroma_client.create_collection(name="documents", metadata={"hnsw:space": "cosine"})
         self.document_names: List[str] = []
+
+    def query(self, query: str, top_k: int = 3) -> str:
+        pass
+
+    def doc_splitter(self, documents: List[Document], chunk_size: int = 1000, chunk_overlap: int = 200) -> List[Document]:
+        pass
+
+    def embedder(self, documents: List[Document]) -> List[List[float]]:
+        pass
+
+    def add_documents(self, documents: List[Document]) -> int:
+        pass
+    
+    def retrieve(self, query: str, top_k: int = 3) -> List[Dict[str, Any]]:
+        pass
+
+    def answer(self, query: str, top_k: int = 3) -> Dict[str, Any]:
+        pass
+
