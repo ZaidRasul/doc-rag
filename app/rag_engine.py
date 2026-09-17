@@ -65,7 +65,7 @@ class RAGEngine:
         return len(chunks)
         
     
-    def retrieve(self, query: str, top_k: int = 6) -> List[Dict[str, Any]]:
+    def retrieve(self, query: str,  top_k: int = 6) -> List[Dict[str, Any]]:
         query_embedding = self.embedder([query])[0]
         number_of_results = min(top_k, self.collection.count())
         results = self.collection.query(
@@ -88,6 +88,55 @@ class RAGEngine:
             })
 
         return retrieved_docs
-    def answer(self, query: str, top_k: int = 3) -> Dict[str, Any]:
-        pass
+    def answer(self, query: str, chat_history: List[Dict[str, str]] | None = None, top_k: int = 3) -> Dict[str, Any]:
+        retrieved_docs = self.retrieve(query, top_k=top_k)
+        context_parts = []
+        for result in retrieved_docs:
+            metadata = result["metadata"]
+            source = metadata.get("source", "Unknown")
+            page = metadata.get("page")
+
+            source_label = source
+            if page is not None:
+                source_label += f", (Page {int(page)+1})"
+            context_parts.append(
+                f"Source: {source_label}\n" 
+                f"Content: \n{result['content']}"
+                )
+
+        context = "\n\n".join(context_parts)
+        history_text = self._format_chat_history(chat_history or [])
+        prompt = f"""
+You are a document-question-answering assistant.
+
+Answer the user's question using only the supplied document context.
+
+Rules:
+1. Do not invent facts that are not present in the context.
+2. If the context is insufficient, clearly say that the uploaded documents
+   do not contain enough information.
+3. Give a clear and concise answer.
+4. When useful, mention the source filename or page.
+5. Previous conversation is provided only to understand follow-up questions.
+   Document context remains the factual source of truth.
+
+Previous conversation:
+{history_text}
+
+Document context:
+{context}
+
+User question:
+{query}
+
+Answer:
+""".strip()
+
+        response = self.llm.invoke([HumanMessage(content=prompt)])
+        sources = self._build_source_list(retrieved_docs)
+    
+        return {
+            "answer": response.content,
+            "sources": sources,
+        }
 
