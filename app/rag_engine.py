@@ -38,7 +38,31 @@ class RAGEngine:
         return embeddings
 
     def add_documents(self, documents: List[Document]) -> int:
-        pass
+        chunks = self.doc_splitter(documents)
+        texts = [doc.page_content for doc in chunks]
+        embeddings = self.embedder(texts)
+        
+        ids = []
+        metadatas = []
+        embeddings_list = []
+        
+        for i, (doc, embedding) in enumerate(zip(chunks, embeddings)):
+            ids.append(f"chunk_{uuid.uuid4().hex}")
+            metadata = dict(doc.metadata)
+            metadata["chunk_index"] = i
+            metadata["content_length"] = len(doc.page_content)
+            metadatas.append(metadata)
+
+            embeddings_list.append(embedding.tolist())
+
+            # add  everything to chroma
+            self.collection.add(
+                ids = ids,
+                documents = texts,
+                embeddings = embeddings_list,
+                metadatas = metadatas
+            )
+        return len(chunks)
         
     
     def retrieve(self, query: str, top_k: int = 3) -> List[Dict[str, Any]]:
