@@ -65,9 +65,29 @@ class RAGEngine:
         return len(chunks)
         
     
-    def retrieve(self, query: str, top_k: int = 3) -> List[Dict[str, Any]]:
-        pass
+    def retrieve(self, query: str, top_k: int = 6) -> List[Dict[str, Any]]:
+        query_embedding = self.embedder([query])[0]
+        number_of_results = min(top_k, self.collection.count())
+        results = self.collection.query(
+            query_embeddings=[query_embedding.tolist()],
+            n_results=top_k
+            )
 
+        retrieved_docs = []
+        documents = results["documents"][0]
+        metadatas = results["metadatas"][0]
+        distances = results["distances"][0]
+        ids = results["ids"][0]
+        for doc, metadata, distance, id in zip(documents, metadatas, distances, ids):
+            retrieved_docs.append({
+                "id": id,
+                "content": doc,
+                "metadata": metadata,
+                "distance": distance,
+                
+            })
+
+        return retrieved_docs
     def answer(self, query: str, top_k: int = 3) -> Dict[str, Any]:
         pass
 
