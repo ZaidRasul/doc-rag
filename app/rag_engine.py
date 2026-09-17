@@ -32,11 +32,14 @@ class RAGEngine:
         split_docs = splitter.split_documents(documents)
         return split_docs
 
-    def embedder(self, documents: List[Document]) -> List[List[float]]:
-        pass
+    def embedder(self, texts: List[str]) -> List[List[float]]:
+        embeddings = self.embedding_model.encode(texts, show_progress_bar=False, normalize_embeddings=True)
+
+        return embeddings
 
     def add_documents(self, documents: List[Document]) -> int:
         pass
+        
     
     def retrieve(self, query: str, top_k: int = 3) -> List[Dict[str, Any]]:
         pass
