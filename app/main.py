@@ -104,14 +104,10 @@ with st.sidebar:
 
         try:
             all_documents = []
-
+            
             with st.spinner("Reading uploaded files..."):
-                for uploaded_file in uploaded_files:
-                    file_documents = load_files(
-                        filename=uploaded_file.name,
-                        file_bytes=uploaded_file.getvalue(),
-                    )
-                    all_documents.extend(file_documents)
+                file_documents = load_files(uploaded_files)
+                all_documents.extend(file_documents)
 
             # Replace the previous uploaded-document collection.
             st.session_state.rag_engine.clear_documents()
