@@ -57,6 +57,8 @@ def load_pdf(file_name: str, file_bytes: bytes) -> List[Document]:
 
 
 def load_txt(file_name: str, file_bytes: bytes) -> List[Document]:
+    # we could directly decode the bytes to string so we don't need to use TextLoader
+    # as text files dont need parsing, we can just read the content as is
     try:
         text = file_bytes.decode("utf-8")
     except UnicodeDecodeError:
@@ -73,4 +75,17 @@ def load_txt(file_name: str, file_bytes: bytes) -> List[Document]:
 
 
 def load_md(file_name: str, file_bytes: bytes) -> List[Document]:
-    pass
+    try:
+        text = file_bytes.decode("utf-8")
+    except UnicodeDecodeError:
+        text = file_bytes.decode("utf-8", errors="replace")
+
+    return [
+        Document(
+            page_content=text,
+            metadata={
+                "source": file_name,
+                "file_type": "md",
+            },
+        )
+    ]
