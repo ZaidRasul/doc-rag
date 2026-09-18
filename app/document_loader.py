@@ -75,6 +75,8 @@ def load_txt(file_name: str, file_bytes: bytes) -> List[Document]:
 
 
 def load_md(file_name: str, file_bytes: bytes) -> List[Document]:
+    # we could directly decode the bytes to string so we don't need to use UnstructuredMarkdownLoader
+    # as md files dont need parsing, we can just read the content as is
     try:
         text = file_bytes.decode("utf-8")
     except UnicodeDecodeError:
