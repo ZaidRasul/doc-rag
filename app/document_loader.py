@@ -30,10 +30,30 @@ def load_files(uploaded_files) -> List[Document]:
     return all_docs
 
 def load_pdf(file_name: str, file_bytes: bytes) -> List[Document]:
-    all_docs = []
-    path = Path(file_name)
-    
+    # Using PyMuPDFLoader to load PDF files
+    # But it needs a file path, so we use tempfile
+    temp_path = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            delete=False,
+            suffix=".pdf"
+            ) as temporary_file:
+                temporary_file.write(file_bytes)
+                temp_path = temporary_file.name
+        loader = PyMuPDFLoader(temp_path)
+        documents = loader.load()
 
+        for document in documents:
+            page_number = document.metadata.get("page_number", 0)
+            document.metadata = {
+                "source": file_name,
+                "file_type": "pdf",
+                "page": page_number,
+            }
+        return documents
+    finally:
+        if temp_path and os.path.exists(temp_path):
+            os.remove(temp_path)
 
 
 def load_txt(file_name: str, file_bytes: bytes) -> List[Document]:
