@@ -110,7 +110,7 @@ with st.sidebar:
                 all_documents.extend(file_documents)
 
             # Replace the previous uploaded-document collection.
-            st.session_state.rag_engine.clear_documents()
+            #st.session_state.rag_engine.clear_documents()
 
             with st.spinner("Chunking and embedding documents..."):
                 chunk_count = (
@@ -180,8 +180,8 @@ if question:
         with st.spinner("Searching the documents..."):
             try:
                 result = (
-                    st.session_state.rag_engine.answer_question(
-                        question=question,
+                    st.session_state.rag_engine.answer(
+                        query=question,
                         chat_history=st.session_state.messages[:-1],
                         top_k=top_k,
                     )
