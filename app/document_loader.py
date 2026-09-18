@@ -57,7 +57,18 @@ def load_pdf(file_name: str, file_bytes: bytes) -> List[Document]:
 
 
 def load_txt(file_name: str, file_bytes: bytes) -> List[Document]:
-    pass
+    try:
+        text = file_bytes.decode("utf-8")
+    except UnicodeDecodeError:
+        text = file_bytes.decode("utf-8", errors="replace")
+    document = Document(
+        page_content=text,
+        metadata={
+            "source": file_name,
+            "file_type": "txt",
+        },
+    )
+    return [document]
 
 
 
