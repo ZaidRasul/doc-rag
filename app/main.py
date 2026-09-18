@@ -5,7 +5,6 @@ from rag_engine import RAGEngine
 from document_loader import load_files
 
 load_dotenv()
-groq_api_key = os.getenv("GROQ_API_KEY")
 
 st.set_page_config(
     page_title="Document RAG",
