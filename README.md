@@ -11,6 +11,8 @@ This query and data is fed into llm as context and llm gives a response.
 
 Flow:
 
+```text
+
                  Streamlit
                     │
           User uploads 3 files
@@ -37,3 +39,5 @@ Flow:
                     │
                     ▼
                  Chroma
+
+```
