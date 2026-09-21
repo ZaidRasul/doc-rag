@@ -6,7 +6,7 @@ langchain_groq==0.3.4
 
 pypdf==6.0.0
 pymupdf==1.26.4
-
+python-docx==1.2.0
 sentence-transformers==3.4.1
 transformers==4.48.3
 
