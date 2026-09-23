@@ -1,6 +1,6 @@
 import json
 
-from evaluation.evaluate_retrieval import (
+from evaluation.retrieval_metrics import (
     precision_at_k,
     recall_at_k,
     reciprocal_rank,
