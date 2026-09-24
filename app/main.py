@@ -97,6 +97,7 @@ with st.sidebar:
         st.session_state.messages = []
         st.session_state.documents_ready = False
         st.session_state.processed_file_signature = None
+        st.success("Cleared the uploaded documents and chat history.")
         st.rerun()
 
     if process_button:
@@ -110,7 +111,7 @@ with st.sidebar:
                 all_documents.extend(file_documents)
 
             # Replace the previous uploaded-document collection.
-            #st.session_state.rag_engine.clear_documents()
+            st.session_state.rag_engine.clear_documents()
 
             with st.spinner("Chunking and embedding documents..."):
                 chunk_count = (
