@@ -42,4 +42,10 @@ def reciprocal_rank(
         retrieved_ids: list[str],
         relevant_ids: list[str],
 ) -> float:
-    pass
+    relevant_set = set(relevant_ids)
+
+    for rank, retrieved_id in enumerate(retrieved_ids, start=1):
+        if retrieved_id in relevant_set:
+            return 1.0 / rank
+
+    return 0.0
