@@ -46,7 +46,7 @@ def load_pdf(file_name: str, file_bytes: bytes) -> List[Document]:
         documents = loader.load()
 
         for document in documents:
-            page_number = document.metadata.get("page_number", 0)
+            page_number = document.metadata.get("page", 0)
             document.metadata = {
                 "source": file_name,
                 "file_type": "pdf",
