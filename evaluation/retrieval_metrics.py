@@ -27,7 +27,15 @@ def recall_at_k(
         relevant_ids: list[str],
         k: int,
 ) -> float:
-    pass
+    relevant_set = set(relevant_ids)
+
+    if not relevant_set:
+        return 0.0
+
+    retrieved_at_k = set(retrieved_ids[:k])
+    relevant_retrieved = len(retrieved_at_k & relevant_set)
+
+    return relevant_retrieved / len(relevant_set)
 
 
 def reciprocal_rank(
