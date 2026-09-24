@@ -19,6 +19,15 @@ class RAGEngine:
         self.collection = self.chroma_client.create_collection(name="documents", metadata={"hnsw:space": "cosine"})
         self.document_names: List[str] = []
 
+    def clear_documents(self) -> None:
+        try:
+            self.chroma_client.delete_collection(name="documents")
+        except ValueError:
+            pass
+
+        self.collection = self.chroma_client.create_collection(name="documents",metadata={"hnsw:space": "cosine"})
+        self.document_names = []
+
     def query(self, query: str, top_k: int = 3) -> str:
         pass
 
