@@ -49,3 +49,17 @@ def reciprocal_rank(
             return 1.0 / rank
 
     return 0.0
+
+
+def hit_rate_at_k(
+    retrieved_ids: list[str],
+    relevant_ids: list[str],
+    k: int,
+) -> float:
+    relevant_set = set(relevant_ids)
+    return float(
+        any(
+            retrieved_id in relevant_set
+            for retrieved_id in retrieved_ids[:k]
+        )
+    )
