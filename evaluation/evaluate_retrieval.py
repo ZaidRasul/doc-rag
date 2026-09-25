@@ -75,7 +75,7 @@ def evaluate_retrieval(engine, dataset_path: str, top_k: int = 5):
 
         })
 
-        summary = {
+    summary = {
         "number_of_queries": len(details),
         "top_k": top_k,
         f"mean_precision_at_{top_k}": mean(
