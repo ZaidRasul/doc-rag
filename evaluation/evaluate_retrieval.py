@@ -100,3 +100,18 @@ def evaluate_retrieval(engine, dataset_path: str, top_k: int = 5):
         "summary": summary,
         "details": details,
     }
+
+def save_evaluation_results(
+    results: dict[str, Any],
+    output_path: str,
+) -> None:
+    """
+    Save the evaluation results for later comparisons.
+    """
+    output_file = Path(output_path)
+    output_file.parent.mkdir(parents=True, exist_ok=True)
+
+    with output_file.open("w", encoding="utf-8") as file:
+        json.dump(results, file, indent=2)
+
+    print(f"Results saved to {output_file}")
