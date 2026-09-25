@@ -76,3 +76,62 @@ def load_evaluation_documents(
             all_documents.extend(file_documents)
 
     return all_documents
+
+
+def main() -> None:
+    load_dotenv(PROJECT_ROOT / ".env")
+
+    groq_api_key = os.getenv("GROQ_API_KEY")
+
+    if not groq_api_key:
+        raise ValueError(
+            "GROQ_API_KEY is missing from the project-root .env file."
+        )
+
+    print("Loading evaluation documents...")
+
+    documents = load_evaluation_documents(
+        DATA_DIRECTORIES
+    )
+
+    if not documents:
+        raise ValueError(
+            "No supported documents were found in the data folders."
+        )
+
+    print(f"Loaded {len(documents)} document units.")
+
+    # This creates a new in-memory Chroma collection for this run.
+    engine = RAGEngine(
+        groq_api_key=groq_api_key,
+        embedding_model_name="all-MiniLM-L6-v2",
+    )
+
+    print("Splitting, embedding, and indexing documents...")
+
+    chunk_count = engine.add_documents(documents)
+
+    print(f"Created {chunk_count} chunks.")
+
+    results = evaluate_retrieval(
+        engine=engine,
+        dataset_path=str(DATASET_PATH),
+        top_k=5,
+    )
+
+    save_evaluation_results(
+        results=results,
+        output_path=str(RESULT_PATH),
+    )
+
+    print("\nBaseline results")
+
+    for metric_name, metric_value in results["summary"].items():
+        if isinstance(metric_value, float):
+            print(f"{metric_name}: {metric_value:.4f}")
+        else:
+            print(f"{metric_name}: {metric_value}")
+
+
+if __name__ == "__main__":
+    main()
