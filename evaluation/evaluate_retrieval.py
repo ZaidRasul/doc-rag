@@ -26,4 +26,77 @@ def make_result_id(result: dict[str, Any]) -> str:
 
 
 def evaluate_retrieval(engine, dataset_path: str, top_k: int = 5):
-    pass
+    dataset_path = Path(dataset_path)
+    if not dataset_path.exists():
+        raise FileNotFoundError(f"Evaluation dataset file not found: {dataset_path}")
+
+    with open(dataset_path, "r", encoding="utf-8") as f:
+        dataset = json.load(f)
+    if not dataset:
+        raise ValueError("Evaluation dataset is empty")
+    details = []
+    
+
+    for example in dataset:
+        query = example["query"]
+        relevant_ids = example["relevant_ids"]
+
+        retrieved_results = engine.retrieve(query, top_k=top_k)
+        retrieved_ids = [
+            make_result_id(result) for result in retrieved_results
+            ]
+
+        precision = precision_at_k(
+            retrieved_ids, relevant_ids, top_k
+            )
+
+        recall = recall_at_k(
+            retrieved_ids, relevant_ids, top_k
+            )
+
+        rr = reciprocal_rank(
+            retrieved_ids, relevant_ids
+            )
+
+        hit_rate = hit_rate_at_k(
+            retrieved_ids, relevant_ids, top_k
+            )
+
+        details.append({
+            "id": example.get("id"),
+            "query": query,
+            "relevant_ids": relevant_ids,
+            "retrieved_ids": retrieved_ids,
+            f"precision_at_{top_k}": precision,
+            f"recall_at_{top_k}": recall,
+            "reciprocal_rank": rr,
+            f"hit_rate_at_{top_k}": hit_rate,
+
+
+        })
+
+        summary = {
+        "number_of_queries": len(details),
+        "top_k": top_k,
+        f"mean_precision_at_{top_k}": mean(
+            result[f"precision_at_{top_k}"]
+            for result in details
+        ),
+        f"mean_recall_at_{top_k}": mean(
+            result[f"recall_at_{top_k}"]
+            for result in details
+        ),
+        "mean_reciprocal_rank": mean(
+            result["reciprocal_rank"]
+            for result in details
+        ),
+        f"hit_rate_at_{top_k}": mean(
+            result[f"hit_rate_at_{top_k}"]
+            for result in details
+        ),
+    }
+
+    return {
+        "summary": summary,
+        "details": details,
+    }
