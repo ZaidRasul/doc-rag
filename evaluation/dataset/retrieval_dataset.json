@@ -1,0 +1,274 @@
+[
+  {
+    "id": "agentic_001",
+    "query": "What five elements make up the formal tuple used to describe an agentic AI control system?",
+    "relevant_ids": ["agentic-ai-notes.pdf::page_4"]
+  },
+  {
+    "id": "agentic_002",
+    "query": "How do MemoryBank, ChatDB, and MemGPT differ in their memory retrieval and retention strategies?",
+    "relevant_ids": ["agentic-ai-notes.pdf::page_8"]
+  },
+  {
+    "id": "agentic_003",
+    "query": "What are the advantages and limitations of ReAct, Reflexion, Tree of Thoughts, and LATS?",
+    "relevant_ids": ["agentic-ai-notes.pdf::page_10"]
+  },
+  {
+    "id": "agentic_004",
+    "query": "How does MetaGPT use roles and standard operating procedures to organize a software swarm?",
+    "relevant_ids": ["agentic-ai-notes.pdf::page_13"]
+  },
+  {
+    "id": "agentic_005",
+    "query": "What layered mitigations protect tool-using agents from prompt injection?",
+    "relevant_ids": ["agentic-ai-notes.pdf::page_18"]
+  },
+  {
+    "id": "deep_learning_001",
+    "query": "Why must a multilayer perceptron use a nonlinear activation instead of the identity function?",
+    "relevant_ids": ["dl-notes.pdf::page_16"]
+  },
+  {
+    "id": "deep_learning_002",
+    "query": "Which output activation functions are recommended for binary and multiclass classification?",
+    "relevant_ids": ["dl-notes.pdf::page_17"]
+  },
+  {
+    "id": "deep_learning_003",
+    "query": "How does early stopping help prevent neural network overfitting?",
+    "relevant_ids": ["dl-notes.pdf::page_31"]
+  },
+  {
+    "id": "deep_learning_004",
+    "query": "How does dropout switch off neurons during neural network training?",
+    "relevant_ids": ["dl-notes.pdf::page_34"]
+  },
+  {
+    "id": "deep_learning_005",
+    "query": "How do the forget gate, input gate, and cell state help an LSTM mitigate vanishing gradients?",
+    "relevant_ids": ["dl-notes.pdf::page_47"]
+  },
+  {
+    "id": "deep_learning_006",
+    "query": "Why is attention useful for variable-length sequence processing?",
+    "relevant_ids": ["dl-notes.pdf::page_49"]
+  },
+  {
+    "id": "gradient_descent_001",
+    "query": "What is the fundamental idea behind choosing the negative gradient direction in gradient descent?",
+    "relevant_ids": ["gradient_descent.pdf::page_1"]
+  },
+  {
+    "id": "gradient_descent_002",
+    "query": "What does it mean for a function to be L-smooth?",
+    "relevant_ids": ["gradient_descent.pdf::page_2"]
+  },
+  {
+    "id": "gradient_descent_003",
+    "query": "What convergence guarantee does the gradient descent lemma provide for an L-smooth function?",
+    "relevant_ids": ["gradient_descent.pdf::page_3"]
+  },
+  {
+    "id": "gradient_descent_004",
+    "query": "What lower bound is established by the Polyak-Lojasiewicz condition?",
+    "relevant_ids": ["gradient_descent.pdf::page_6"]
+  },
+  {
+    "id": "llm_apps_001",
+    "query": "Which LangChain component splits loaded documents into smaller pieces?",
+    "relevant_ids": ["llm_application_nots.pdf::page_22"]
+  },
+  {
+    "id": "llm_apps_002",
+    "query": "What LangChain storage component holds embedded document chunks for similarity search?",
+    "relevant_ids": ["llm_application_nots.pdf::page_24"]
+  },
+  {
+    "id": "llm_apps_003",
+    "query": "Which retrieval technique balances relevance with diversity among retrieved documents?",
+    "relevant_ids": ["llm_application_nots.pdf::page_27"]
+  },
+  {
+    "id": "llm_apps_004",
+    "query": "What do the two words in the ReAct agent approach stand for?",
+    "relevant_ids": ["llm_application_nots.pdf::page_53"]
+  },
+  {
+    "id": "llm_apps_005",
+    "query": "What two processing modes does CrewAI support?",
+    "relevant_ids": ["llm_application_nots.pdf::page_63"]
+  },
+  {
+    "id": "llm_apps_006",
+    "query": "How does DSPy differ from manually prompting a language model?",
+    "relevant_ids": ["llm_application_nots.pdf::page_68"]
+  },
+  {
+    "id": "machine_learning_001",
+    "query": "What concepts and algorithms are introduced to explain support vector machines?",
+    "relevant_ids": ["ml-notes.pdf::page_61"]
+  },
+  {
+    "id": "machine_learning_002",
+    "query": "Which alternatives to ReLU are listed as neural network activation functions?",
+    "relevant_ids": ["ml-notes.pdf::page_91"]
+  },
+  {
+    "id": "machine_learning_003",
+    "query": "What two steps are repeatedly performed during the k-means algorithm?",
+    "relevant_ids": ["ml-notes.pdf::page_149"]
+  },
+  {
+    "id": "machine_learning_004",
+    "query": "What applications of PCA are described for compression, visualization, and preprocessing?",
+    "relevant_ids": ["ml-notes.pdf::page_173"]
+  },
+  {
+    "id": "neural_networks_001",
+    "query": "Why can a neural network with many layers represent more complex functions than a single layer?",
+    "relevant_ids": ["neural_net_notes.pdf::page_4"]
+  },
+  {
+    "id": "neural_networks_002",
+    "query": "How is the chain rule used in neural network error backpropagation?",
+    "relevant_ids": [
+      "neural_net_notes.pdf::page_6",
+      "neural_net_notes.pdf::page_7"
+    ]
+  },
+  {
+    "id": "neural_networks_003",
+    "query": "What is the difference between batch, stochastic, and mini-batch gradient descent?",
+    "relevant_ids": [
+      "neural_net_notes.pdf::page_11",
+      "neural_net_notes.pdf::page_12"
+    ]
+  },
+  {
+    "id": "neural_networks_004",
+    "query": "How does the Adam optimizer use moving averages during neural network optimization?",
+    "relevant_ids": ["neural_net_notes.pdf::page_14"]
+  },
+  {
+    "id": "python_pdf_001",
+    "query": "What rules are given for choosing valid and meaningful Python variable and function names?",
+    "relevant_ids": ["python_notes.pdf::page_2"]
+  },
+  {
+    "id": "python_pdf_002",
+    "query": "How are indexing and slicing used with Python lists?",
+    "relevant_ids": ["python_notes.pdf::page_4"]
+  },
+  {
+    "id": "python_pdf_003",
+    "query": "What is list aliasing in Python?",
+    "relevant_ids": ["python_notes.pdf::page_5"]
+  },
+  {
+    "id": "rag_001",
+    "query": "What is the basic flow of a retrieval-augmented generation system?",
+    "relevant_ids": [
+      "rag_notes.pdf::page_2",
+      "rag_notes.pdf::page_3"
+    ]
+  },
+  {
+    "id": "rag_002",
+    "query": "How do BM25 and dense passage retrieval differ?",
+    "relevant_ids": ["rag_notes.pdf::page_6"]
+  },
+  {
+    "id": "rag_003",
+    "query": "How does retrieval-augmented fine-tuning handle irrelevant distractor documents?",
+    "relevant_ids": ["rag_notes.pdf::page_10"]
+  },
+  {
+    "id": "rag_004",
+    "query": "Why are interpretability and transparency considered challenges for RAG systems?",
+    "relevant_ids": ["rag_notes.pdf::page_12"]
+  },
+  {
+    "id": "reinforcement_learning_001",
+    "query": "What are the agent-environment interface, goals, rewards, returns, and episodes in a finite Markov decision process?",
+    "relevant_ids": [
+      "rl_notes.pdf::page_11",
+      "rl_notes.pdf::page_12"
+    ]
+  },
+  {
+    "id": "reinforcement_learning_002",
+    "query": "How does iterative policy evaluation use the Bellman equation?",
+    "relevant_ids": ["rl_notes.pdf::page_16"]
+  },
+  {
+    "id": "reinforcement_learning_003",
+    "query": "Why do Monte Carlo reinforcement learning methods wait until an episode terminates before updating values?",
+    "relevant_ids": ["rl_notes.pdf::page_19"]
+  },
+  {
+    "id": "reinforcement_learning_004",
+    "query": "How does temporal-difference learning combine Monte Carlo sampling with dynamic programming bootstrapping?",
+    "relevant_ids": ["rl_notes.pdf::page_25"]
+  },
+  {
+    "id": "reinforcement_learning_005",
+    "query": "Why is Q-learning off-policy while SARSA is on-policy?",
+    "relevant_ids": ["rl_notes.pdf::page_27"]
+  },
+  {
+    "id": "reinforcement_learning_006",
+    "query": "What is the difference between a distribution model and a sample model in reinforcement learning?",
+    "relevant_ids": ["rl_notes.pdf::page_34"]
+  },
+  {
+    "id": "reinforcement_learning_007",
+    "query": "What four operations are performed in each Monte Carlo tree search iteration?",
+    "relevant_ids": ["rl_notes.pdf::page_40"]
+  },
+  {
+    "id": "reinforcement_learning_008",
+    "query": "How do eligibility traces provide a backward view of credit assignment?",
+    "relevant_ids": ["rl_notes.pdf::page_55"]
+  },
+  {
+    "id": "reinforcement_learning_009",
+    "query": "What do lambda equal to zero and lambda equal to one reduce TD lambda to?",
+    "relevant_ids": ["rl_notes.pdf::page_57"]
+  },
+  {
+    "id": "reinforcement_learning_010",
+    "query": "How does adding a state-value baseline reduce variance in REINFORCE?",
+    "relevant_ids": ["rl_notes.pdf::page_65"]
+  },
+  {
+    "id": "text_ml_001",
+    "query": "What is the difference between features and labels in a machine learning dataset?",
+    "relevant_ids": ["ml-intro.txt"]
+  },
+  {
+    "id": "text_ml_002",
+    "query": "How do supervised, unsupervised, and reinforcement learning differ?",
+    "relevant_ids": ["ml-intro.txt"]
+  },
+  {
+    "id": "text_ml_003",
+    "query": "What is overfitting, and how is it similar to memorizing practice answers?",
+    "relevant_ids": ["ml-intro.txt"]
+  },
+  {
+    "id": "text_python_001",
+    "query": "What basic Python data types are described, and what kind of value does each hold?",
+    "relevant_ids": ["python-intro.txt"]
+  },
+  {
+    "id": "text_python_002",
+    "query": "How do Python lists, dictionaries, and sets differ?",
+    "relevant_ids": ["python-intro.txt"]
+  },
+  {
+    "id": "text_python_003",
+    "query": "What learning order is recommended for progressing from Python basics to PyTorch?",
+    "relevant_ids": ["python-intro.txt"]
+  }
+]
