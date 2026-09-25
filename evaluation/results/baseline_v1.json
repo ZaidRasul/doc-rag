@@ -1,0 +1,952 @@
+{
+  "summary": {
+    "number_of_queries": 52,
+    "top_k": 5,
+    "mean_precision_at_5": 0.33461538461538465,
+    "mean_recall_at_5": 0.875,
+    "mean_reciprocal_rank": 0.6897435897435897,
+    "hit_rate_at_5": 0.8846153846153846
+  },
+  "details": [
+    {
+      "id": "agentic_001",
+      "query": "What five elements make up the formal tuple used to describe an agentic AI control system?",
+      "relevant_ids": [
+        "agentic-ai-notes.pdf::page_4"
+      ],
+      "retrieved_ids": [
+        "llm_application_nots.pdf::page_41",
+        "agentic-ai-notes.pdf::page_5",
+        "llm_application_nots.pdf::page_82",
+        "llm_application_nots.pdf::page_47",
+        "agentic-ai-notes.pdf::page_5"
+      ],
+      "precision_at_5": 0.0,
+      "recall_at_5": 0.0,
+      "reciprocal_rank": 0.0,
+      "hit_rate_at_5": 0.0
+    },
+    {
+      "id": "agentic_002",
+      "query": "How do MemoryBank, ChatDB, and MemGPT differ in their memory retrieval and retention strategies?",
+      "relevant_ids": [
+        "agentic-ai-notes.pdf::page_8"
+      ],
+      "retrieved_ids": [
+        "agentic-ai-notes.pdf::page_8",
+        "agentic-ai-notes.pdf::page_8",
+        "agentic-ai-notes.pdf::page_8",
+        "agentic-ai-notes.pdf::page_23",
+        "agentic-ai-notes.pdf::page_8"
+      ],
+      "precision_at_5": 0.8,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "agentic_003",
+      "query": "What are the advantages and limitations of ReAct, Reflexion, Tree of Thoughts, and LATS?",
+      "relevant_ids": [
+        "agentic-ai-notes.pdf::page_10"
+      ],
+      "retrieved_ids": [
+        "agentic-ai-notes.pdf::page_9",
+        "llm_application_nots.pdf::page_53",
+        "agentic-ai-notes.pdf::page_10",
+        "agentic-ai-notes.pdf::page_6",
+        "dl-notes.pdf::page_4"
+      ],
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 0.3333333333333333,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "agentic_004",
+      "query": "How does MetaGPT use roles and standard operating procedures to organize a software swarm?",
+      "relevant_ids": [
+        "agentic-ai-notes.pdf::page_13"
+      ],
+      "retrieved_ids": [
+        "agentic-ai-notes.pdf::page_13",
+        "agentic-ai-notes.pdf::page_6",
+        "agentic-ai-notes.pdf::page_12",
+        "agentic-ai-notes.pdf::page_6",
+        "agentic-ai-notes.pdf::page_3"
+      ],
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "agentic_005",
+      "query": "What layered mitigations protect tool-using agents from prompt injection?",
+      "relevant_ids": [
+        "agentic-ai-notes.pdf::page_18"
+      ],
+      "retrieved_ids": [
+        "agentic-ai-notes.pdf::page_18",
+        "agentic-ai-notes.pdf::page_2",
+        "agentic-ai-notes.pdf::page_18",
+        "agentic-ai-notes.pdf::page_2",
+        "agentic-ai-notes.pdf::page_18"
+      ],
+      "precision_at_5": 0.6,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "deep_learning_001",
+      "query": "Why must a multilayer perceptron use a nonlinear activation instead of the identity function?",
+      "relevant_ids": [
+        "dl-notes.pdf::page_16"
+      ],
+      "retrieved_ids": [
+        "dl-notes.pdf::page_13",
+        "neural_net_notes.pdf::page_4",
+        "dl-notes.pdf::page_16",
+        "dl-notes.pdf::page_16",
+        "neural_net_notes.pdf::page_2"
+      ],
+      "precision_at_5": 0.4,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 0.3333333333333333,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "deep_learning_002",
+      "query": "Which output activation functions are recommended for binary and multiclass classification?",
+      "relevant_ids": [
+        "dl-notes.pdf::page_17"
+      ],
+      "retrieved_ids": [
+        "dl-notes.pdf::page_17",
+        "dl-notes.pdf::page_15",
+        "dl-notes.pdf::page_16",
+        "neural_net_notes.pdf::page_9",
+        "neural_net_notes.pdf::page_4"
+      ],
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "deep_learning_003",
+      "query": "How does early stopping help prevent neural network overfitting?",
+      "relevant_ids": [
+        "dl-notes.pdf::page_31"
+      ],
+      "retrieved_ids": [
+        "neural_net_notes.pdf::page_15",
+        "neural_net_notes.pdf::page_15",
+        "dl-notes.pdf::page_32",
+        "dl-notes.pdf::page_32",
+        "dl-notes.pdf::page_31"
+      ],
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 0.2,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "deep_learning_004",
+      "query": "How does dropout switch off neurons during neural network training?",
+      "relevant_ids": [
+        "dl-notes.pdf::page_34"
+      ],
+      "retrieved_ids": [
+        "dl-notes.pdf::page_35",
+        "neural_net_notes.pdf::page_15",
+        "dl-notes.pdf::page_34",
+        "dl-notes.pdf::page_35",
+        "dl-notes.pdf::page_34"
+      ],
+      "precision_at_5": 0.4,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 0.3333333333333333,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "deep_learning_005",
+      "query": "How do the forget gate, input gate, and cell state help an LSTM mitigate vanishing gradients?",
+      "relevant_ids": [
+        "dl-notes.pdf::page_47"
+      ],
+      "retrieved_ids": [
+        "dl-notes.pdf::page_47",
+        "dl-notes.pdf::page_47",
+        "dl-notes.pdf::page_48",
+        "dl-notes.pdf::page_47",
+        "dl-notes.pdf::page_48"
+      ],
+      "precision_at_5": 0.6,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "deep_learning_006",
+      "query": "Why is attention useful for variable-length sequence processing?",
+      "relevant_ids": [
+        "dl-notes.pdf::page_49"
+      ],
+      "retrieved_ids": [
+        "dl-notes.pdf::page_51",
+        "dl-notes.pdf::page_49",
+        "dl-notes.pdf::page_50",
+        "ml-notes.pdf::page_211",
+        "ml-notes.pdf::page_214"
+      ],
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 0.5,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "gradient_descent_001",
+      "query": "What is the fundamental idea behind choosing the negative gradient direction in gradient descent?",
+      "relevant_ids": [
+        "gradient_descent.pdf::page_1"
+      ],
+      "retrieved_ids": [
+        "gradient_descent.pdf::page_1",
+        "dl-notes.pdf::page_10",
+        "gradient_descent.pdf::page_1",
+        "gradient_descent.pdf::page_1",
+        "neural_net_notes.pdf::page_11"
+      ],
+      "precision_at_5": 0.6,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "gradient_descent_002",
+      "query": "What does it mean for a function to be L-smooth?",
+      "relevant_ids": [
+        "gradient_descent.pdf::page_2"
+      ],
+      "retrieved_ids": [
+        "gradient_descent.pdf::page_2",
+        "gradient_descent.pdf::page_2",
+        "gradient_descent.pdf::page_1",
+        "gradient_descent.pdf::page_3",
+        "ml-notes.pdf::page_49"
+      ],
+      "precision_at_5": 0.4,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "gradient_descent_003",
+      "query": "What convergence guarantee does the gradient descent lemma provide for an L-smooth function?",
+      "relevant_ids": [
+        "gradient_descent.pdf::page_3"
+      ],
+      "retrieved_ids": [
+        "gradient_descent.pdf::page_1",
+        "gradient_descent.pdf::page_3",
+        "gradient_descent.pdf::page_5",
+        "gradient_descent.pdf::page_5",
+        "gradient_descent.pdf::page_4"
+      ],
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 0.5,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "gradient_descent_004",
+      "query": "What lower bound is established by the Polyak-Lojasiewicz condition?",
+      "relevant_ids": [
+        "gradient_descent.pdf::page_6"
+      ],
+      "retrieved_ids": [
+        "gradient_descent.pdf::page_6",
+        "gradient_descent.pdf::page_5",
+        "gradient_descent.pdf::page_6",
+        "ml-notes.pdf::page_71",
+        "ml-notes.pdf::page_70"
+      ],
+      "precision_at_5": 0.4,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "llm_apps_001",
+      "query": "Which LangChain component splits loaded documents into smaller pieces?",
+      "relevant_ids": [
+        "llm_application_nots.pdf::page_22"
+      ],
+      "retrieved_ids": [
+        "llm_application_nots.pdf::page_22",
+        "llm_application_nots.pdf::page_23",
+        "llm_application_nots.pdf::page_21",
+        "llm_application_nots.pdf::page_16",
+        "llm_application_nots.pdf::page_18"
+      ],
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "llm_apps_002",
+      "query": "What LangChain storage component holds embedded document chunks for similarity search?",
+      "relevant_ids": [
+        "llm_application_nots.pdf::page_24"
+      ],
+      "retrieved_ids": [
+        "llm_application_nots.pdf::page_22",
+        "rag_notes.pdf::page_3",
+        "llm_application_nots.pdf::page_21",
+        "llm_application_nots.pdf::page_25",
+        "llm_application_nots.pdf::page_27"
+      ],
+      "precision_at_5": 0.0,
+      "recall_at_5": 0.0,
+      "reciprocal_rank": 0.0,
+      "hit_rate_at_5": 0.0
+    },
+    {
+      "id": "llm_apps_003",
+      "query": "Which retrieval technique balances relevance with diversity among retrieved documents?",
+      "relevant_ids": [
+        "llm_application_nots.pdf::page_27"
+      ],
+      "retrieved_ids": [
+        "rag_notes.pdf::page_4",
+        "rag_notes.pdf::page_6",
+        "rag_notes.pdf::page_6",
+        "rag_notes.pdf::page_4",
+        "rag_notes.pdf::page_11"
+      ],
+      "precision_at_5": 0.0,
+      "recall_at_5": 0.0,
+      "reciprocal_rank": 0.0,
+      "hit_rate_at_5": 0.0
+    },
+    {
+      "id": "llm_apps_004",
+      "query": "What do the two words in the ReAct agent approach stand for?",
+      "relevant_ids": [
+        "llm_application_nots.pdf::page_53"
+      ],
+      "retrieved_ids": [
+        "llm_application_nots.pdf::page_53",
+        "llm_application_nots.pdf::page_55",
+        "llm_application_nots.pdf::page_56",
+        "llm_application_nots.pdf::page_54",
+        "llm_application_nots.pdf::page_42"
+      ],
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "llm_apps_005",
+      "query": "What two processing modes does CrewAI support?",
+      "relevant_ids": [
+        "llm_application_nots.pdf::page_63"
+      ],
+      "retrieved_ids": [
+        "llm_application_nots.pdf::page_63",
+        "llm_application_nots.pdf::page_64",
+        "llm_application_nots.pdf::page_90",
+        "llm_application_nots.pdf::page_66",
+        "agentic-ai-notes.pdf::page_9"
+      ],
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "llm_apps_006",
+      "query": "How does DSPy differ from manually prompting a language model?",
+      "relevant_ids": [
+        "llm_application_nots.pdf::page_68"
+      ],
+      "retrieved_ids": [
+        "llm_application_nots.pdf::page_68",
+        "llm_application_nots.pdf::page_68",
+        "ml-notes.pdf::page_219",
+        "llm_application_nots.pdf::page_2",
+        "ml-notes.pdf::page_218"
+      ],
+      "precision_at_5": 0.4,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "machine_learning_001",
+      "query": "What concepts and algorithms are introduced to explain support vector machines?",
+      "relevant_ids": [
+        "ml-notes.pdf::page_61"
+      ],
+      "retrieved_ids": [
+        "ml-notes.pdf::page_61",
+        "ml-notes.pdf::page_60",
+        "neural_net_notes.pdf::page_1",
+        "ml-notes.pdf::page_60",
+        "ml-intro.txt"
+      ],
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "machine_learning_002",
+      "query": "Which alternatives to ReLU are listed as neural network activation functions?",
+      "relevant_ids": [
+        "ml-notes.pdf::page_91"
+      ],
+      "retrieved_ids": [
+        "ml-notes.pdf::page_92",
+        "dl-notes.pdf::page_16",
+        "neural_net_notes.pdf::page_2",
+        "ml-notes.pdf::page_85",
+        "neural_net_notes.pdf::page_6"
+      ],
+      "precision_at_5": 0.0,
+      "recall_at_5": 0.0,
+      "reciprocal_rank": 0.0,
+      "hit_rate_at_5": 0.0
+    },
+    {
+      "id": "machine_learning_003",
+      "query": "What two steps are repeatedly performed during the k-means algorithm?",
+      "relevant_ids": [
+        "ml-notes.pdf::page_149"
+      ],
+      "retrieved_ids": [
+        "ml-notes.pdf::page_149",
+        "ml-notes.pdf::page_149",
+        "ml-notes.pdf::page_148",
+        "ml-notes.pdf::page_148",
+        "ml-notes.pdf::page_150"
+      ],
+      "precision_at_5": 0.4,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "machine_learning_004",
+      "query": "What applications of PCA are described for compression, visualization, and preprocessing?",
+      "relevant_ids": [
+        "ml-notes.pdf::page_173"
+      ],
+      "retrieved_ids": [
+        "ml-notes.pdf::page_173",
+        "ml-notes.pdf::page_173",
+        "ml-notes.pdf::page_173",
+        "ml-notes.pdf::page_172",
+        "ml-notes.pdf::page_169"
+      ],
+      "precision_at_5": 0.6,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "neural_networks_001",
+      "query": "Why can a neural network with many layers represent more complex functions than a single layer?",
+      "relevant_ids": [
+        "neural_net_notes.pdf::page_4"
+      ],
+      "retrieved_ids": [
+        "neural_net_notes.pdf::page_4",
+        "dl-notes.pdf::page_14",
+        "dl-notes.pdf::page_13",
+        "neural_net_notes.pdf::page_4",
+        "neural_net_notes.pdf::page_4"
+      ],
+      "precision_at_5": 0.6,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "neural_networks_002",
+      "query": "How is the chain rule used in neural network error backpropagation?",
+      "relevant_ids": [
+        "neural_net_notes.pdf::page_6",
+        "neural_net_notes.pdf::page_7"
+      ],
+      "retrieved_ids": [
+        "ml-notes.pdf::page_100",
+        "ml-notes.pdf::page_104",
+        "ml-notes.pdf::page_107",
+        "ml-notes.pdf::page_102",
+        "ml-notes.pdf::page_106"
+      ],
+      "precision_at_5": 0.0,
+      "recall_at_5": 0.0,
+      "reciprocal_rank": 0.0,
+      "hit_rate_at_5": 0.0
+    },
+    {
+      "id": "neural_networks_003",
+      "query": "What is the difference between batch, stochastic, and mini-batch gradient descent?",
+      "relevant_ids": [
+        "neural_net_notes.pdf::page_11",
+        "neural_net_notes.pdf::page_12"
+      ],
+      "retrieved_ids": [
+        "neural_net_notes.pdf::page_11",
+        "ml-notes.pdf::page_84",
+        "ml-notes.pdf::page_15",
+        "neural_net_notes.pdf::page_11",
+        "neural_net_notes.pdf::page_12"
+      ],
+      "precision_at_5": 0.6,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "neural_networks_004",
+      "query": "How does the Adam optimizer use moving averages during neural network optimization?",
+      "relevant_ids": [
+        "neural_net_notes.pdf::page_14"
+      ],
+      "retrieved_ids": [
+        "dl-notes.pdf::page_26",
+        "dl-notes.pdf::page_26",
+        "neural_net_notes.pdf::page_14",
+        "neural_net_notes.pdf::page_12",
+        "neural_net_notes.pdf::page_14"
+      ],
+      "precision_at_5": 0.4,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 0.3333333333333333,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "python_pdf_001",
+      "query": "What rules are given for choosing valid and meaningful Python variable and function names?",
+      "relevant_ids": [
+        "python_notes.pdf::page_2"
+      ],
+      "retrieved_ids": [
+        "python-intro.txt",
+        "python-intro.txt",
+        "python_notes.pdf::page_2",
+        "python_notes.pdf::page_2",
+        "python-intro.txt"
+      ],
+      "precision_at_5": 0.4,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 0.3333333333333333,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "python_pdf_002",
+      "query": "How are indexing and slicing used with Python lists?",
+      "relevant_ids": [
+        "python_notes.pdf::page_4"
+      ],
+      "retrieved_ids": [
+        "python-intro.txt",
+        "python_notes.pdf::page_4",
+        "python-intro.txt",
+        "python_notes.pdf::page_1",
+        "python_notes.pdf::page_3"
+      ],
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 0.5,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "python_pdf_003",
+      "query": "What is list aliasing in Python?",
+      "relevant_ids": [
+        "python_notes.pdf::page_5"
+      ],
+      "retrieved_ids": [
+        "python_notes.pdf::page_5",
+        "python-intro.txt",
+        "python-intro.txt",
+        "python_notes.pdf::page_4",
+        "python_notes.pdf::page_6"
+      ],
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "rag_001",
+      "query": "What is the basic flow of a retrieval-augmented generation system?",
+      "relevant_ids": [
+        "rag_notes.pdf::page_2",
+        "rag_notes.pdf::page_3"
+      ],
+      "retrieved_ids": [
+        "rag_notes.pdf::page_1",
+        "rag_notes.pdf::page_7",
+        "rag_notes.pdf::page_2",
+        "rag_notes.pdf::page_3",
+        "ml-notes.pdf::page_202"
+      ],
+      "precision_at_5": 0.4,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 0.3333333333333333,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "rag_002",
+      "query": "How do BM25 and dense passage retrieval differ?",
+      "relevant_ids": [
+        "rag_notes.pdf::page_6"
+      ],
+      "retrieved_ids": [
+        "rag_notes.pdf::page_6",
+        "rag_notes.pdf::page_6",
+        "rag_notes.pdf::page_3",
+        "rag_notes.pdf::page_6",
+        "rag_notes.pdf::page_5"
+      ],
+      "precision_at_5": 0.6,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "rag_003",
+      "query": "How does retrieval-augmented fine-tuning handle irrelevant distractor documents?",
+      "relevant_ids": [
+        "rag_notes.pdf::page_10"
+      ],
+      "retrieved_ids": [
+        "rag_notes.pdf::page_4",
+        "rag_notes.pdf::page_9",
+        "rag_notes.pdf::page_7",
+        "rag_notes.pdf::page_10",
+        "ml-notes.pdf::page_199"
+      ],
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 0.25,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "rag_004",
+      "query": "Why are interpretability and transparency considered challenges for RAG systems?",
+      "relevant_ids": [
+        "rag_notes.pdf::page_12"
+      ],
+      "retrieved_ids": [
+        "rag_notes.pdf::page_4",
+        "rag_notes.pdf::page_12",
+        "rag_notes.pdf::page_12",
+        "rag_notes.pdf::page_4",
+        "rag_notes.pdf::page_1"
+      ],
+      "precision_at_5": 0.4,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 0.5,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "reinforcement_learning_001",
+      "query": "What are the agent-environment interface, goals, rewards, returns, and episodes in a finite Markov decision process?",
+      "relevant_ids": [
+        "rl_notes.pdf::page_11",
+        "rl_notes.pdf::page_12"
+      ],
+      "retrieved_ids": [
+        "rl_notes.pdf::page_11",
+        "rl_notes.pdf::page_11",
+        "rl_notes.pdf::page_15",
+        "rl_notes.pdf::page_1",
+        "ml-notes.pdf::page_229"
+      ],
+      "precision_at_5": 0.4,
+      "recall_at_5": 0.5,
+      "reciprocal_rank": 1.0,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "reinforcement_learning_002",
+      "query": "How does iterative policy evaluation use the Bellman equation?",
+      "relevant_ids": [
+        "rl_notes.pdf::page_16"
+      ],
+      "retrieved_ids": [
+        "rl_notes.pdf::page_17",
+        "ml-notes.pdf::page_248",
+        "rl_notes.pdf::page_16",
+        "rl_notes.pdf::page_14",
+        "rl_notes.pdf::page_18"
+      ],
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 0.3333333333333333,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "reinforcement_learning_003",
+      "query": "Why do Monte Carlo reinforcement learning methods wait until an episode terminates before updating values?",
+      "relevant_ids": [
+        "rl_notes.pdf::page_19"
+      ],
+      "retrieved_ids": [
+        "rl_notes.pdf::page_25",
+        "rl_notes.pdf::page_20",
+        "rl_notes.pdf::page_20",
+        "rl_notes.pdf::page_22",
+        "rl_notes.pdf::page_22"
+      ],
+      "precision_at_5": 0.0,
+      "recall_at_5": 0.0,
+      "reciprocal_rank": 0.0,
+      "hit_rate_at_5": 0.0
+    },
+    {
+      "id": "reinforcement_learning_004",
+      "query": "How does temporal-difference learning combine Monte Carlo sampling with dynamic programming bootstrapping?",
+      "relevant_ids": [
+        "rl_notes.pdf::page_25"
+      ],
+      "retrieved_ids": [
+        "rl_notes.pdf::page_25",
+        "rl_notes.pdf::page_23",
+        "rl_notes.pdf::page_36",
+        "rl_notes.pdf::page_26",
+        "rl_notes.pdf::page_62"
+      ],
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "reinforcement_learning_005",
+      "query": "Why is Q-learning off-policy while SARSA is on-policy?",
+      "relevant_ids": [
+        "rl_notes.pdf::page_27"
+      ],
+      "retrieved_ids": [
+        "rl_notes.pdf::page_27",
+        "rl_notes.pdf::page_28",
+        "rl_notes.pdf::page_27",
+        "rl_notes.pdf::page_27",
+        "rl_notes.pdf::page_32"
+      ],
+      "precision_at_5": 0.6,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "reinforcement_learning_006",
+      "query": "What is the difference between a distribution model and a sample model in reinforcement learning?",
+      "relevant_ids": [
+        "rl_notes.pdf::page_34"
+      ],
+      "retrieved_ids": [
+        "rl_notes.pdf::page_34",
+        "rl_notes.pdf::page_39",
+        "rl_notes.pdf::page_34",
+        "dl-notes.pdf::page_55",
+        "rl_notes.pdf::page_39"
+      ],
+      "precision_at_5": 0.4,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "reinforcement_learning_007",
+      "query": "What four operations are performed in each Monte Carlo tree search iteration?",
+      "relevant_ids": [
+        "rl_notes.pdf::page_40"
+      ],
+      "retrieved_ids": [
+        "rl_notes.pdf::page_40",
+        "rl_notes.pdf::page_39",
+        "rl_notes.pdf::page_2",
+        "rl_notes.pdf::page_32",
+        "rl_notes.pdf::page_38"
+      ],
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "reinforcement_learning_008",
+      "query": "How do eligibility traces provide a backward view of credit assignment?",
+      "relevant_ids": [
+        "rl_notes.pdf::page_55"
+      ],
+      "retrieved_ids": [
+        "rl_notes.pdf::page_55",
+        "rl_notes.pdf::page_62",
+        "rl_notes.pdf::page_61",
+        "rl_notes.pdf::page_62",
+        "rl_notes.pdf::page_65"
+      ],
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "reinforcement_learning_009",
+      "query": "What do lambda equal to zero and lambda equal to one reduce TD lambda to?",
+      "relevant_ids": [
+        "rl_notes.pdf::page_57"
+      ],
+      "retrieved_ids": [
+        "rl_notes.pdf::page_56",
+        "rl_notes.pdf::page_3",
+        "rl_notes.pdf::page_58",
+        "rl_notes.pdf::page_57",
+        "rl_notes.pdf::page_57"
+      ],
+      "precision_at_5": 0.4,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 0.25,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "reinforcement_learning_010",
+      "query": "How does adding a state-value baseline reduce variance in REINFORCE?",
+      "relevant_ids": [
+        "rl_notes.pdf::page_65"
+      ],
+      "retrieved_ids": [
+        "rl_notes.pdf::page_65",
+        "rl_notes.pdf::page_64",
+        "ml-notes.pdf::page_259",
+        "rl_notes.pdf::page_64",
+        "rl_notes.pdf::page_66"
+      ],
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "text_ml_001",
+      "query": "What is the difference between features and labels in a machine learning dataset?",
+      "relevant_ids": [
+        "ml-intro.txt"
+      ],
+      "retrieved_ids": [
+        "ml-intro.txt",
+        "ml-intro.txt",
+        "ml-notes.pdf::page_93",
+        "ml-intro.txt",
+        "ml-intro.txt"
+      ],
+      "precision_at_5": 0.8,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "text_ml_002",
+      "query": "How do supervised, unsupervised, and reinforcement learning differ?",
+      "relevant_ids": [
+        "ml-intro.txt"
+      ],
+      "retrieved_ids": [
+        "rl_notes.pdf::page_4",
+        "ml-intro.txt",
+        "ml-notes.pdf::page_228",
+        "rl_notes.pdf::page_21",
+        "rl_notes.pdf::page_11"
+      ],
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 0.5,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "text_ml_003",
+      "query": "What is overfitting, and how is it similar to memorizing practice answers?",
+      "relevant_ids": [
+        "ml-intro.txt"
+      ],
+      "retrieved_ids": [
+        "ml-notes.pdf::page_199",
+        "rag_notes.pdf::page_10",
+        "ml-intro.txt",
+        "ml-notes.pdf::page_117",
+        "agentic-ai-notes.pdf::page_10"
+      ],
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 0.3333333333333333,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "text_python_001",
+      "query": "What basic Python data types are described, and what kind of value does each hold?",
+      "relevant_ids": [
+        "python-intro.txt"
+      ],
+      "retrieved_ids": [
+        "python-intro.txt",
+        "python-intro.txt",
+        "python-intro.txt",
+        "python_notes.pdf::page_6",
+        "python_notes.pdf::page_1"
+      ],
+      "precision_at_5": 0.6,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "text_python_002",
+      "query": "How do Python lists, dictionaries, and sets differ?",
+      "relevant_ids": [
+        "python-intro.txt"
+      ],
+      "retrieved_ids": [
+        "python-intro.txt",
+        "python_notes.pdf::page_6",
+        "python-intro.txt",
+        "python-intro.txt",
+        "dl-notes.pdf::page_50"
+      ],
+      "precision_at_5": 0.6,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "hit_rate_at_5": 1.0
+    },
+    {
+      "id": "text_python_003",
+      "query": "What learning order is recommended for progressing from Python basics to PyTorch?",
+      "relevant_ids": [
+        "python-intro.txt"
+      ],
+      "retrieved_ids": [
+        "python-intro.txt",
+        "python-intro.txt",
+        "python-intro.txt",
+        "dl-notes.pdf::page_6",
+        "ml-notes.pdf::page_275"
+      ],
+      "precision_at_5": 0.6,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "hit_rate_at_5": 1.0
+    }
+  ]
+}
